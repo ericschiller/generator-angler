@@ -9,7 +9,8 @@
 ### Notes
 
 This project is is a fork of Angulpify.  I've updated a lot of packages
-and have included Karma and Jasmine.  This is mostly for myself, but I
+and have included Karma, Jasmine, and swapped out live-reload for
+browser-sync.  This is mostly for myself, but I
 will add options for testing frameworks later on. 
 
 
