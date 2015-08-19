@@ -4,7 +4,7 @@ var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
 var chalk = require('chalk');
 
-var AngulpifyGenerator = module.exports = yeoman.generators.Base.extend({
+var AnglerGenerator = module.exports = yeoman.generators.Base.extend({
   constructor: function () {
     yeoman.generators.Base.apply(this, arguments);
     this.option('skip-welcome-message', {desc: 'Skip the welcome message'});
@@ -203,7 +203,7 @@ var AngulpifyGenerator = module.exports = yeoman.generators.Base.extend({
         templateEngine = {folderName: 'jade', extension: '.jade'};
       }
       this.copy('src/templates/'+templateEngine.folderName+'/index'+templateEngine.extension, 'src/index'+templateEngine.extension);
-      this.copy('src/templates/'+templateEngine.folderName+'/layout'+templateEngine.extension, 'src/modules/app/foo/layout'+templateEngine.extension);
+      this.copy('src/templates/'+templateEngine.folderName+'/layout'+templateEngine.extension, 'src/modules/app/sample/layout'+templateEngine.extension);
 
     },
     writeStyles: function () {
@@ -227,3 +227,4 @@ var AngulpifyGenerator = module.exports = yeoman.generators.Base.extend({
   end: function () {
   }
 });
+
