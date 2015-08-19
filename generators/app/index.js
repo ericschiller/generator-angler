@@ -161,18 +161,22 @@ var AngulpifyGenerator = module.exports = yeoman.generators.Base.extend({
       this.copy('_gulpfile.js', 'gulpfile.js');
       this.directory('gulp', 'gulp');
     },
+    writeKarma: function () {
+      this.copy('_karma.conf.js', 'karma.conf.js');
+    },
+
     writeBower: function () {
       var bower = {
         name: this.appname,
         private: true,
         dependencies: {
-          angular: '~1.2.21'
+          angular: '~1.4.4'
         }
       };
       if (this.includeBootstrap) bower.dependencies['bootstrap'+(this.includeSass ? '-sass-official' : '')] = '~3.2.0';
       if (this.includeUIBootstrap) bower.dependencies['angular-bootstrap'] = '~0.11.0';
       if (this.includeUIRouter) {
-        bower.dependencies['angular-ui-router'] = '~0.2.10';
+        bower.dependencies['angular-ui-router'] = '~0.2.15';
       } else {
         bower.dependencies['angular-route'] = '~1.2.21';
       }
