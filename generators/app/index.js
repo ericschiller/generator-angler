@@ -31,10 +31,6 @@ var AnglerGenerator = module.exports = yeoman.generators.Base.extend({
         message: 'Would you like to use a language other than JavaScript?',
         choices: [
           {
-            name: 'CoffeeScript',
-            value: 'includeCoffeeScript'
-          },
-          {
             name: 'TypeScript',
             value: 'includeTypeScript'
           },
@@ -113,7 +109,6 @@ var AnglerGenerator = module.exports = yeoman.generators.Base.extend({
 
       this.appname = answers.projectName;
 
-      this.includeCoffeeScript = hasFeature('includeCoffeeScript');
       this.includeTypeScript = hasFeature('includeTypeScript');
       this.includeJavaScript = hasFeature('includeJavaScript');
 
@@ -134,7 +129,6 @@ var AnglerGenerator = module.exports = yeoman.generators.Base.extend({
   configuring: function () {
     this.config.set({
       projectName: this.appname,
-      includeCoffeeScript: this.includeCoffeeScript,
       includeTypeScript: this.includeTypeScript,
       includeJavaScript: this.includeJavaScript,
       includeLess: this.includeLess,
@@ -150,9 +144,7 @@ var AnglerGenerator = module.exports = yeoman.generators.Base.extend({
     this.copy('editorconfig', '.editorconfig');
     this.copy('jshintrc', '.jshintrc');
     this.copy('gitignore', '.gitignore');
-    if (this.includeCoffeeScript) {
-      this.copy('_coffeelint.json', 'coffeelint.json');
-    } else if (this.includeTypeScript) {
+    if (this.includeTypeScript) {
       this.copy('_tslint.json', 'tslint.json');
     }
   },
@@ -191,9 +183,7 @@ var AnglerGenerator = module.exports = yeoman.generators.Base.extend({
     },
     writeModules: function () {
       var language = {folderName: 'javascript'};
-      if (this.includeCoffeeScript) {
-        language = {folderName: 'coffeescript'};
-      } else if (this.includeTypeScript) {
+      if (this.includeTypeScript) {
         language = {folderName: 'typescript'};
       }
       this.directory('src/modules/'+language.folderName, 'src/modules');
