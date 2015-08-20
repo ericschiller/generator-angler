@@ -27,22 +27,6 @@ var AnglerGenerator = module.exports = yeoman.generators.Base.extend({
       },
       {
         type: 'list',
-        name: 'language',
-        message: 'Would you like to use a language other than JavaScript?',
-        choices: [
-          {
-            name: 'TypeScript',
-            value: 'includeTypeScript'
-          },
-          {
-            name: 'JavaScript is all I need',
-            value: 'includeJavaScript'
-          }
-        ],
-        default: 2
-      },
-      {
-        type: 'list',
         name: 'preprocessor',
         message: 'Would you like to use a preprocessor?',
         choices: [
@@ -109,7 +93,6 @@ var AnglerGenerator = module.exports = yeoman.generators.Base.extend({
 
       this.appname = answers.projectName;
 
-      this.includeTypeScript = hasFeature('includeTypeScript');
       this.includeJavaScript = hasFeature('includeJavaScript');
 
       this.includeLess = hasFeature('includeLess');
@@ -129,7 +112,6 @@ var AnglerGenerator = module.exports = yeoman.generators.Base.extend({
   configuring: function () {
     this.config.set({
       projectName: this.appname,
-      includeTypeScript: this.includeTypeScript,
       includeJavaScript: this.includeJavaScript,
       includeLess: this.includeLess,
       includeSass: this.includeSass,
@@ -144,9 +126,6 @@ var AnglerGenerator = module.exports = yeoman.generators.Base.extend({
     this.copy('editorconfig', '.editorconfig');
     this.copy('jshintrc', '.jshintrc');
     this.copy('gitignore', '.gitignore');
-    if (this.includeTypeScript) {
-      this.copy('_tslint.json', 'tslint.json');
-    }
   },
   writing: {
     writeGulp: function () {
