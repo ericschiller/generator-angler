@@ -12,6 +12,13 @@ and have included Karma, Jasmine, and swapped out live-reload for
 browser-sync.  This is mostly for myself, but I
 will add options for testing frameworks later on. 
 
+## Todo
+
+* Add generators for Angular modules, controllers, services, etc.
+* Make Karma and the testing stack optional.
+* Figure out how to get Browsersync work correctly with Jade.  
+* Update Watchify and rewrite it appropriately. 
+* Clean up stuff I missed when removing previous functionality.
 
 ## Features
 
@@ -64,14 +71,6 @@ To install dependencies, run `bower install --save package-name` to get the file
 ## Special Thanks
 
 This generator is a fork of generator-angulpify. Thanks to Julien Goux!
-
-## Todo
-
-* Add generators for Angular modules, controllers, services, etc.
-* Make Karma and the testing stack optional.
-* Figure out how to get Browsersync work correctly with Jade.  
-* Update Watchify and rewrite it appropriately. 
-* Clean up stuff I miss when removing previous functionality.
 
 ## License
 

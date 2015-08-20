@@ -1,6 +1,6 @@
 {
   "name": "generator-angler",
-  "version": "0.0.2",
+  "version": "0.0.2.1",
   "description": "Yeoman generator for Angular, Gulp and Browserify. Fork of generator-angulpifiy",
   "license": "MIT",
   "repository": "ericschiller/generator-angler",
