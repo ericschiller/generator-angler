@@ -3,12 +3,11 @@
 
 > [Yeoman](http://yeoman.io) generator that scaffolds out a front-end web app using [angularjs](https://angularjs.org/), [gulp](http://gulpjs.com/) and [browserify](http://browserify.org/)
 
-![](http://i.imgur.com/ucUfQQz.png)
-
 
 ### Notes
 
-This project is is a fork of Angulpify.  I've updated a lot of packages
+This project is a fork of Angulpify suited to meet my everyday needs
+at my job.  I've updated a lot of packages
 and have included Karma, Jasmine, and swapped out live-reload for
 browser-sync.  This is mostly for myself, but I
 will add options for testing frameworks later on. 
@@ -17,8 +16,7 @@ will add options for testing frameworks later on.
 ## Features
 
 * Require() everywhere to build a modular application
-* Built-in preview server with livereload
-* Automagically compile CoffeeScript (you can use plain JavaScript if you prefer!)
+* Built-in preview server with Browsersync for CSS/SASS
 * Automagically lint your scripts
 * Automagically compile Sass/Less (you can still use CSS too!)
 * CSS Autoprefixing
@@ -36,18 +34,17 @@ This generator relies on several technologies, make sure your system has:
 - [Yeoman](http://yeoman.io/learning/index.html)
 - [Bower](http://bower.io/#install-bower)
 - [Gulp](http://gulpjs.com)
-- [LiveReload](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions)
 - [[Ruby](https://www.ruby-lang.org/en/installation/) + [Sass](http://sass-lang.com/install)] | Optional
 
 
 ## Getting Started
 
 - Install: `npm install -g generator-angulpify`
-- Run: `yo angulpify`
+- Run: `yo angler`
 - Run:
   * `gulp` for building to the `build` directory
   * `gulp --release` for building to the `release` directory
-- Go to http://localhost:8080
+- Go to http://localhost:3000
 - Enjoy!
 
 
@@ -58,27 +55,23 @@ This generator relies on several technologies, make sure your system has:
 To install dependencies, run `bower install --save package-name` to get the files, then add an entry into the [browser](generators/app/templates/_package.json#L41) key of your `package.json`.
 
 
-## Docs
-
-More to come.
-
-
 ## Options
 
 - `--skip-install`
   Skips the automatic execution of `bower` and `npm` after scaffolding has finished.
 
 
-## Contribute
-
-PRs are welcome!
-
-
 ## Special Thanks
 
-This generator is inspired by the [Web app generator](https://github.com/yeoman/generator-gulp-webapp) and by [Ben Clinkinbeard](http://twitter.com/bclinkinbeard)'s [presentation](http://benclinkinbeard.com/talks/2014/ng-conf/).
-Thanks to all the contributors!
+This generator is a fork of generator-angulpify. Thanks to Julien Goux!
 
+## Todo
+
+* Add generators for Angular modules, controllers, services, etc.
+* Make Karma and the testing stack optional.
+* Figure out how to get Browsersync work correctly with Jade.  
+* Update Watchify and rewrite it appropriately. 
+* Clean up stuff I miss when removing previous functionality.
 
 ## License
 
