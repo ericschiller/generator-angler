@@ -3,14 +3,14 @@
 
 > [Yeoman](http://yeoman.io) generator that scaffolds out a front-end web app using [angularjs](https://angularjs.org/), [gulp](http://gulpjs.com/) and [browserify](http://browserify.org/)
 
+(http://i.imgur.com/qC3Nbe9.jpg)
 
 ### Notes
 
-This project is a fork of Angulpify suited to meet my everyday needs
-at my job.  I've updated a lot of packages
+This project is a fork of Angulpify suited to meet my everyday needs. As a result it's more opinionated than Angulpify and I've
+removed some options and functionality.  I've updated a lot of packages
 and have included Karma, Jasmine, and swapped out live-reload for
-browser-sync.  This is mostly for myself, but I
-will add options for testing frameworks later on. 
+browser-sync.  
 
 ## Todo
 
@@ -70,7 +70,7 @@ To install dependencies, run `bower install --save package-name` to get the file
 
 ## Special Thanks
 
-This generator is a fork of generator-angulpify. Thanks to Julien Goux!
+This generator is a fork of [generator-angulpify](https://www.npmjs.com/package/generator-angulpify). Thanks to Julien Goux!
 
 ## License
 
