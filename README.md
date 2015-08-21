@@ -46,7 +46,7 @@ This generator relies on several technologies, make sure your system has:
 
 ## Getting Started
 
-- Install: `npm install -g generator-angulpify`
+- Install: `npm install -g generator-angler`
 - Run: `yo angler`
 - Run:
   * `gulp` for building to the `build` directory
