@@ -3,7 +3,7 @@
 
 > [Yeoman](http://yeoman.io) generator that scaffolds out a front-end web app using [angularjs](https://angularjs.org/), [gulp](http://gulpjs.com/) and [browserify](http://browserify.org/)
 
-(http://i.imgur.com/qC3Nbe9.jpg)
+[angler](http://i.imgur.com/qC3Nbe9.jpg 'an angler')
 
 ### Notes
 
