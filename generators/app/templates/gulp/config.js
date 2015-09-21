@@ -15,7 +15,7 @@ global.config = {
       templates: SRC_FOLDER + '/modules/**/*.<% if (includeJade) { %>jade<% } else { %>html<% } %>',
       templatesHTML: SRC_FOLDER + '/modules/**/*.html',
       templatesCompiled: TMP_FOLDER,
-      modules: './' + SRC_FOLDER + 'js'
+      modules: './' + SRC_FOLDER + '/modules/index.js'
     },
     dest: {
       build: {
